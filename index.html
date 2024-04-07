@@ -40,7 +40,7 @@
     }
 
     .btn{
-      font-size: 12px;
+      font-size: 16px;
       color: #8abaf9;
       font-family: 'Times New Roman', Times, serif;
       border: none;
@@ -81,16 +81,24 @@
   <p><a class="btn" href="https://www.taiwanlottery.com/today_last_number">latest winning number</a></p>
 
   <script>
+    const random = (min, max) => {
+      return Math.round(Math.random() * (max - min)) + min
+    }
+
     const showLottery = () => {
       let lotteryA = []
       for (let i = 0; i < 6; i++) {
-        const lottery = Math.round(Math.random() * 38)
-        lotteryA += lottery + ', '
+        const number = random(1, 38)
+        if (lotteryA.includes(number)){
+          i--
+        } else {
+          lotteryA.push(number)
+        }
       }
 
-      const lotteryB = Math.round(Math.random() * 7) + 1
+      const lotteryB = random(1, 8)
 
-      document.getElementById("demo").innerHTML = `${lotteryA}${lotteryB}`
+      document.getElementById("demo").innerHTML = `${lotteryA.join(', ')}, ${lotteryB}`
     }
   </script>
 </body>
