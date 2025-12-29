@@ -6,7 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/lotteryVueApp/', // GitHub repository name
+  base: '/lottery/', // GitHub repository name
   plugins: [
     vue(),
     vueDevTools(),
