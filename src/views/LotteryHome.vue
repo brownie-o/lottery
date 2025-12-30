@@ -162,7 +162,6 @@ onMounted(() => {
 })
 </script>
 
-<style src="@/css/style.css"></style>
 
 <style scoped>
 .history-info {

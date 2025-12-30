@@ -269,4 +269,3 @@ const cancelEdit = (id) => {
 }
 </style>
 
-<style src="@/css/style.css"></style>
