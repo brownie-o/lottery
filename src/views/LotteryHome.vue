@@ -15,20 +15,21 @@
       
       <!-- Edit Mode -->
       <template v-else>
-         <input 
-            v-for="(n, index) in tempNumbers" 
-            :key="index"
-            v-model.number="tempNumbers[index]"
-            type="number" 
-            class="ball-input"
-            min="1" max="38"
-         />
-         <input 
+        <input 
+          v-for="(n, index) in tempNumbers" 
+          :key="index"
+          v-model.number="tempNumbers[index]"
+          type="number" 
+          class="ball-input"
+          min="1" max="38"
+          :autofocus="index === 0"
+        />
+        <input 
             v-model.number="tempSpecial"
             type="number" 
             class="ball-input special"
             min="1" max="8"
-         />
+       />
       </template>
     </div>
     
